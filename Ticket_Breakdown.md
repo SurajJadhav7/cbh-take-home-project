@@ -57,4 +57,5 @@ FE: Frontend
     - Implementation Details:
       - in agent metadata in `getShiftsByFacility` function, instead of returning `agent_id` from Agents table, we need to return custom agent id from `fc_custom_agent_id` table.
       - we will get custom agent id based on `facility_id` from `getShiftsByFacility`'s argument and `agent_id` from Shifts table.
+      - we will need to create SQL join on Shifts table and `fc_custom_agent_id` table on `agent_id`'s from both tables. we need to retrieve `facility_agent_id` from `fc_custom_agent_id` table after SQL join.
 
